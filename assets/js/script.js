@@ -1,3 +1,11 @@
+//Function to enable auto focus: https://getbootstrap.com/docs/5.3/components/modal/
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
 // Retrieve tasks and nextId from localStorage
 let taskList = JSON.parse(localStorage.getItem("tasks"));
 let nextId = JSON.parse(localStorage.getItem("nextId"));
