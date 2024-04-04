@@ -1,3 +1,9 @@
+h3, p {
+  color: white;
+  margin: 16px;
+
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -8,9 +14,30 @@ body {
 }
 
 .task-card {
-  margin: 0 auto;
+  margin: 0px 16px 8px;
+  background-color: red;
+  min-height: 220px;
+  min-width: 24px;
+  text-decoration: none;
+  padding: 24px;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.task-placeholder {
+  background-color: #e0e0e0;
+  border: 1px dashed #999;
+  height: 40px;
 }
 
 .task-card:hover {
   cursor: grab;
+}
+
+.delete-btn {
+  padding: 8px 24px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: solid 1px ;  
 }

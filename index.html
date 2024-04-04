@@ -54,7 +54,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+              <h1 class="modal-title fs-5" id="modal-title">Add Task</h1>
               <button
                 type="button"
                 class="btn-close"
@@ -64,46 +64,44 @@
             </div>
             <div class="modal-body">
               <div class="container-fluid">
-                <form class="row">
+                <form id="create-task-form" class="row">
                   <div class="mb-3 col-md-6">
-                    <label for="recipient-name" class="col-form-label"
+                    <label for="task-title" class="col-form-label"
                       >Task Title:</label
                     >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="recipient-name"
-                    />
+                    <input type="text" class="form-control" id="task-title" />
                   </div>
                   <div class="mb-3 col-md-6 ms-auto">
-                    <label for="recipient-name" class="col-form-label"
+                    <label for="date-picker" class="col-form-label"
                       >Task Due Date:</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="recipient-name"
+                      id="task-due-date"
                     />
                   </div>
 
                   <div class="mb-3">
-                    <label for="modal-title" class="col-form-label"
+                    <label for="task-description" class="col-form-label"
                       >Task Description:</label
                     >
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea
+                      class="form-control"
+                      id="task-description"
+                    ></textarea>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <button
+                      type="submit"
+                      value="Submit"
+                      class="btn btn-success"
+                    >
+                      Add Task
+                    </button>
                   </div>
                 </form>
               </div>
-            </div>
-            <div class="modal-footer justify-content-center">
-              <!-- <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button> -->
-              <button type="button" class="btn btn-success">Add Task</button>
             </div>
           </div>
         </div>
@@ -115,8 +113,9 @@
             <div class="card-header bg-white">
               <h2 class="card-title mb-1">To Do</h2>
             </div>
-            <div class="card-body bg-light">
-              <div id="todo-cards"></div>
+            <div class="card-body bg-light sortable-list" id="todo-cards">
+              <!-- <div id="todo-cards" class="cards-column"> -->
+              <!-- </div> -->
             </div>
           </div>
         </div>
@@ -125,8 +124,12 @@
             <div class="card-header bg-white">
               <h2 class="card-title mb-1">In Progress</h2>
             </div>
-            <div class="card-body bg-light">
-              <div id="in-progress-cards"></div>
+            <div
+              class="card-body bg-light sortable-list"
+              id="in-progress-cards"
+            >
+              <!-- <div id="in-progress-cards" class="cards-column"> -->
+              <!-- </div> -->
             </div>
           </div>
         </div>
@@ -135,8 +138,8 @@
             <div class="card-header bg-white">
               <h2 class="card-title mb-1">Done</h2>
             </div>
-            <div class="card-body bg-light">
-              <div id="done-cards"></div>
+            <div class="card-body bg-light sortable-list" id="done-cards">
+              <!-- <div id="done-cards" class="cards-column"></div> -->
             </div>
           </div>
         </div>
