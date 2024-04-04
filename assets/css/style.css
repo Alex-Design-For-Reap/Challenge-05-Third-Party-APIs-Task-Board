@@ -1,5 +1,5 @@
 h3, p {
-  color: white;
+  /* color: white; */
   margin: 16px;
 
 }
@@ -15,14 +15,40 @@ body {
 
 .task-card {
   margin: 0px 16px 8px;
-  background-color: red;
+  background-color: rgb(212, 212, 212);
   min-height: 220px;
   min-width: 24px;
   text-decoration: none;
   padding: 24px;
   justify-content: center;
   border-radius: 8px;
+  color: black;
 }
+
+.past-due {
+  margin: 0px 16px 8px;
+  background-color: rgb(228, 13, 13);
+  min-height: 220px;
+  min-width: 24px;
+  text-decoration: none;
+  padding: 24px;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+}
+
+.due-soon{
+  margin: 0px 16px 8px;
+  background-color: rgb(215, 185, 15);
+  min-height: 220px;
+  min-width: 24px;
+  text-decoration: none;
+  padding: 24px;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+}
+
 
 .task-placeholder {
   background-color: #e0e0e0;
